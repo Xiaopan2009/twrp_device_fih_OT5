@@ -7,7 +7,6 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from OT5 device
 $(call inherit-product, device/fih/OT5/device.mk)
