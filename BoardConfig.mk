@@ -10,7 +10,6 @@ DEVICE_PATH := device/fih/OT5
 ALLOW_MISSING_DEPENDENCIES := true
 
 # A/B (Virtual A/B)
-BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
 TARGET_ARCH := arm64
