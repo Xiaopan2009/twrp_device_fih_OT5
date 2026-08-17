@@ -10,8 +10,6 @@ DEVICE_PATH := device/fih/OT5
 ALLOW_MISSING_DEPENDENCIES := true
 
 # A/B (Virtual A/B)
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS +=
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # Architecture
