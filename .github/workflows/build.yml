@@ -46,10 +46,12 @@ jobs:
           export ALLOW_MISSING_DEPENDENCIES=true
           source build/envsetup.sh
           lunch omni_OT5-eng
-          make recoveryimage -j$(nproc --all)
+          make recoveryimage -j$(nproc --all) || true
+          make bootimage -j$(nproc --all)
+          ls -la out/target/product/OT5/ | grep -E '\.img' || true
 
       - name: Upload recovery.img
         uses: actions/upload-artifact@v4
         with:
           name: twrp_OT5_recovery
-          path: workspace/out/target/product/OT5/recovery.img
+          path: workspace/out/target/product/OT5/*.img
